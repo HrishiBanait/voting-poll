@@ -1,0 +1,13 @@
+use anchor_lang::prelude::*;
+
+#[account]
+#[derive(InitSpace)]
+pub struct TreasuryConfig{
+    pub authority:Pubkey,
+    pub x_mint: Pubkey,
+    pub treasury_per_purchase: u64,
+    pub tokens_per_purchase: u64,
+    pub sol_price: u64,
+    pub bump: u8,
+
+}
